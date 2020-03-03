@@ -3,61 +3,164 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=750" />
+    <meta name="format-detection" content="telephone=no" />
     <title>惠氏媽咪親和孕哺LC40膠囊</title>
+    <link rel="stylesheet" href="css/html5reset-trim.css" type="text/css" />
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/page2.css" />
   </head>
   <body>
-    <div class="LC40-game-wrap">
-      <div class="bg-img">
-        <img src="images/bg-blank.gif" alt="" />
+    <div class="LC40-start-wrap">
+      <header>
+        <img src="images/logo.png" alt="">
+      </header>
+      <div class="loading">
+        <div class="loading-pulse"></div>
       </div>
-      <div class="content">
+      <div class="bg-img">
+        <img src="images/bg-blank2.gif" alt="" />
+      </div>
+      <div class="top">
         <div class="probiotic-game-wrap">
-          <img src="images/click-bubble.png" alt="" />
+          <img class="bubble" src="images/click-bubble.png" alt="" />
           <div class="probiotic-wrap">
             <div class="row">
-              <img src="images/bad-probiotic-1.png" alt="" />
-              <img src="images/bad-probiotic-2.png" alt="" />
-              <img src="images/good-probiotic.png" alt="" />
-              <img src="images/bad-probiotic-1.png" alt="" />
+              <img
+                class="germ bad"
+                data-toggle="modal"
+                data-target="#wrongModal"
+                src="images/bad-probiotic-1.png"
+                alt=""
+              />
+              <img
+                class="germ bad"
+                data-toggle="modal"
+                data-target="#wrongModal"
+                src="images/bad-probiotic-2.png"
+                alt=""
+              />
+              <img
+                class="germ good"
+                id="g01"
+                src="images/good-probiotic.png"
+                alt=""
+              />
+              <img
+                class="germ bad"
+                data-toggle="modal"
+                data-target="#wrongModal"
+                src="images/bad-probiotic-1.png"
+                alt=""
+              />
             </div>
             <div class="row">
-              <img src="images/bad-probiotic-2.png" alt="" />
-              <img src="images/bad-probiotic-1.png" alt="" />
-              <img src="images/bad-probiotic-2.png" alt="" />
-              <img src="images/good-probiotic.png" alt="" />
+              <img
+                class="germ bad"
+                data-toggle="modal"
+                data-target="#wrongModal"
+                src="images/bad-probiotic-2.png"
+                alt=""
+              />
+              <img
+                class="germ bad"
+                data-toggle="modal"
+                data-target="#wrongModal"
+                src="images/bad-probiotic-1.png"
+                alt=""
+              />
+              <img
+                class="germ bad"
+                data-toggle="modal"
+                data-target="#wrongModal"
+                src="images/bad-probiotic-2.png"
+                alt=""
+              />
+              <img
+                class="germ good"
+                id="g02"
+                src="images/good-probiotic.png"
+                alt=""
+              />
             </div>
             <div class="row">
-              <img src="images/good-probiotic.png" alt="" />
-              <img src="images/good-probiotic.png" alt="" />
-              <img src="images/good-probiotic.png" alt="" />
+              <img
+                class="germ good"
+                id="g03"
+                src="images/good-probiotic.png"
+                alt=""
+              />
+              <img
+                class="germ good"
+                id="g04"
+                src="images/good-probiotic.png"
+                alt=""
+              />
+              <img
+                class="germ good"
+                id="g05"
+                src="images/good-probiotic.png"
+                alt=""
+              />
             </div>
             <div class="row">
-              <img src="images/bad-probiotic-2.png" alt="" />
-              <img src="images/bad-probiotic-1.png" alt="" />
-              <img src="images/bad-probiotic-2.png" alt="" />
+              <img
+                class="germ bad"
+                data-toggle="modal"
+                data-target="#wrongModal"
+                src="images/bad-probiotic-2.png"
+                alt=""
+              />
+              <img
+                class="germ bad"
+                data-toggle="modal"
+                data-target="#wrongModal"
+                src="images/bad-probiotic-1.png"
+                alt=""
+              />
+              <img
+                class="germ bad"
+                data-toggle="modal"
+                data-target="#wrongModal"
+                src="images/bad-probiotic-2.png"
+                alt=""
+              />
             </div>
           </div>
-        </div>
-        <div class="text-wrap">
-          <img src="images/mission-btn.png" alt="" />
-          <div class="text">
-            <p class="shine-font-yellow">
-              找出<span>源於母乳LC40<span>TM</span>益菌<span>*</span></span
-              >x5個
-            </p>
-            <p class="shine-font-blue">
-              從哺乳開始養成母乳活性力 奠定寶寶保護力
-            </p>
-          </div>
-          <p class="note">
-            *原始菌株篩選自母乳LC40TM益菌 *LC40TM is distributed under license
-            by Biosearch S.A.
-          </p>
         </div>
       </div>
+      <div id="wrongModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <img src="images/error.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <footer>
+        <img src="images/page2-footer.png" alt="" />
+        <div class="footer-content">
+           <div class="text-wrap">
+            <img src="images/mission-btn.png" alt="" />
+            <div class="text">
+              <p class="shine-font-yellow">
+                找出<span>源於母乳LC40<span>TM</span>益菌<span>*</span></span
+                >x5個
+              </p>
+              <p class="shine-font-blue">
+                從哺乳開始養成母乳活性力 奠定寶寶保護力
+              </p>
+            </div>
+          </div>
+          <p class="note">*原始菌株篩選自母乳LC40TM益菌 *LC40TM is distributed under license
+              by Biosearch S.A.</p>
+        </div>
+      </footer>
     </div>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <!--[if IE]><script src="lib/html5.js"></script><![endif]-->
+    <script src="lib/bootstrap/popper.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/modernizr.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

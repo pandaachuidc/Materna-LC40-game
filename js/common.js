@@ -6,6 +6,7 @@ var mobile = !/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
 $(function() {
   $(".germ.good").on("click", function() {
     $(this).addClass("on");
+    $(this).attr("src", "images/good-probiotic-on.png");
     checkResult();
   });
   function checkResult() {
@@ -18,8 +19,10 @@ $(function() {
     ) {
       $(".loading").addClass("on");
       setTimeout(function() {
-        window.location.href = "complete.html";
+        window.location.href = "success.html";
       }, 3000);
     }
   }
 });
+
+

@@ -1,0 +1,41 @@
+.LC40-success-wrap {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  .bg-img {
+    width: 100%;
+    background: url(../images/LC40-game-page3-bg.jpg) no-repeat top center;
+    background-size: 100%;
+    &:before {
+      content: "";
+      display: block;
+      background: url(../images/LC40-game-page3-bg-2.jpg) no-repeat top center;
+      background-size: 100%;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      animation: img_shine 1.5s linear infinite alternate;
+    }
+    &:before {
+      content: "";
+      display: block;
+      background: url(../images/ribbon.png) no-repeat center center;
+      background-size: 100%;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      animation: scale-ribbon 5s linear alternate;
+      animation-fill-mode: forwards;
+    }
+  }
+}
