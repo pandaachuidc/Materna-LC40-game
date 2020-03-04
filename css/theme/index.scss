@@ -1,54 +1,59 @@
-.LC40-index-wrap {
+body {
+  background-color: $bg-blue;
   max-width: 750px;
-  width: 100%;
   margin: 0 auto;
-  // padding-bottom: 5%;
-  position: relative;
-  .bg-img {
+  .LC40-index-wrap {
+    max-width: 750px;
     width: 100%;
-    background: url(../images/LC40-game-page1-bg.jpg) no-repeat top center;
-    background-size: 100%;
-    &:before {
-      content: "";
-      display: block;
-      background: url(../images/LC40-game-page1-bg-2.jpg) no-repeat top center;
-      background-size: 100%;
+    margin: 0 auto;
+    position: relative;
+    .bg-img {
       width: 100%;
-      height: 100%;
+      background: url(../images/LC40-game-page1-bg.jpg) no-repeat top center;
+      background-size: 100%;
+      &:before {
+        content: "";
+        display: block;
+        background: url(../images/LC40-game-page1-bg-2.jpg) no-repeat top center;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        animation: img_shine 1.5s linear infinite alternate;
+      }
+    }
+    .content {
       position: absolute;
-      z-index: 1;
-      top: 0;
+      top: 763px;
       left: 0;
       right: 0;
-      animation: img_shine 1.5s linear infinite alternate;
-    }
-  }
-  .content {
-    position: absolute;
-    top: 597px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    text-align: center;
-    .LC40-pic {
-      padding-left: 54.8%;
-      width: 100%;
-    }
-    .text {
-      padding-top: 7em;
-      padding-bottom: 3em;
-      p {
-        text-align: center;
-        font-size: 34px;
-        font-weight: bolder;
-        &:nth-of-type(1) {
-          color: $dark-yellow;
-          span {
-            font-size: 55px;
+      z-index: 2;
+      text-align: center;
+      .LC40-pic {
+        padding-left: 54.8%;
+        width: 100%;
+      }
+      .text {
+        padding-top: 7em;
+        padding-bottom: 3em;
+        p {
+          text-align: center;
+          font-size: 34px;
+          font-weight: bolder;
+          &:nth-of-type(1) {
+            color: $dark-yellow;
+            span {
+              font-size: 55px;
+            }
           }
-        }
-        &:nth-of-type(2) {
-          padding-top: 0.5em;
+          &:nth-of-type(2) {
+            padding-top: 0.5em;
+            color: $dark-blue;
+          }
         }
       }
     }

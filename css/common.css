@@ -185,26 +185,22 @@ header {
   left: 23px;
   z-index: 6; }
 
-footer {
+footer .footer-content {
   position: absolute;
-  bottom: 0;
-  height: 258px; }
-  footer .footer-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
-    text-align: center; }
-    footer .footer-content .start, footer .footer-content .redeem {
-      display: block; }
-      footer .footer-content .start img, footer .footer-content .redeem img {
-        -webkit-animation: scale 0.8s infinite ease-in-out alternate;
-        animation: scale 0.8s infinite ease-in-out alternate; }
-    footer .footer-content .note {
-      padding: 1.5em 0;
-      font-size: 16px;
-      color: #fff; }
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  text-align: center; }
+  footer .footer-content .start, footer .footer-content .redeem {
+    display: block; }
+    footer .footer-content .start img, footer .footer-content .redeem img {
+      -webkit-animation: scale 0.8s infinite ease-in-out alternate;
+      animation: scale 0.8s infinite ease-in-out alternate; }
+  footer .footer-content .note {
+    padding: 1.5em 0;
+    font-size: 16px;
+    color: #fff; }
 
 @-webkit-keyframes img_shine {
   0% {
@@ -217,18 +213,6 @@ footer {
     opacity: 0; }
   to {
     opacity: 1; } }
-
-@-webkit-keyframes font-shine {
-  0% {
-    background-position: 0% 0; }
-  to {
-    background-position: -300% 0; } }
-
-@keyframes font-shine {
-  0% {
-    background-position: 0% 0; }
-  to {
-    background-position: -300% 0; } }
 
 @-webkit-keyframes scale {
   from {
@@ -249,18 +233,22 @@ footer {
 @-webkit-keyframes scale-ribbon {
   from {
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    opacity: 0; }
   to {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3); } }
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1; } }
 
 @keyframes scale-ribbon {
   from {
     -webkit-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    opacity: 0; }
   to {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3); } }
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1; } }
 
 @-webkit-keyframes rotate {
   to {
@@ -283,24 +271,20 @@ footer {
     transform: rotate(-10deg); } }
 
 @-webkit-keyframes backgroundScale {
-  0% {
+  from {
     -webkit-transform: scale(1);
-    transform: scale(1);
-    top: -300px; }
-  100% {
+    transform: scale(1); }
+  to {
     -webkit-transform: scale(1.6);
-    transform: scale(1.6);
-    top: -600px; } }
+    transform: scale(1.6); } }
 
 @keyframes backgroundScale {
-  0% {
+  from {
     -webkit-transform: scale(1);
-    transform: scale(1);
-    top: -300px; }
-  100% {
+    transform: scale(1); }
+  to {
     -webkit-transform: scale(1.6);
-    transform: scale(1.6);
-    top: -600px; } }
+    transform: scale(1.6); } }
 
 @-webkit-keyframes probiotic-game-wrap {
   0% {
@@ -326,82 +310,65 @@ footer {
   50% {
     background: #fff; } }
 
-.shine-font-yellow {
-  background: -webkit-linear-gradient(left, #d6a818 0%, #ba7c17 24%, #d6a818 36%, #ba7c17 46%, #d6a818 52%, #ba7c17 58%, #ba7c17 67%, #d6a818 100%);
-  background-size: 100%;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  background-size: 300%;
-  -webkit-animation: font-shine 10s infinite;
-  animation: font-shine 10s infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.shine-font-blue {
-  background: -webkit-linear-gradient(left, #267cc4 0%, #073190 24%, #267cc4 36%, #073190 46%, #267cc4 52%, #073190 58%, #073190 67%, #267cc4 100%);
-  background-size: 100%;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  background-size: 300%;
-  -webkit-animation: font-shine 10s infinite;
-  animation: font-shine 10s infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
 /* Theme */
-.LC40-index-wrap {
+body {
+  background-color: #023591;
   max-width: 750px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative; }
-  .LC40-index-wrap .bg-img {
+  margin: 0 auto; }
+  body .LC40-index-wrap {
+    max-width: 750px;
     width: 100%;
-    background: url(../images/LC40-game-page1-bg.jpg) no-repeat top center;
-    background-size: 100%; }
-    .LC40-index-wrap .bg-img:before {
-      content: "";
-      display: block;
-      background: url(../images/LC40-game-page1-bg-2.jpg) no-repeat top center;
-      background-size: 100%;
+    margin: 0 auto;
+    position: relative; }
+    body .LC40-index-wrap .bg-img {
       width: 100%;
-      height: 100%;
+      background: url(../images/LC40-game-page1-bg.jpg) no-repeat top center;
+      background-size: 100%; }
+      body .LC40-index-wrap .bg-img:before {
+        content: "";
+        display: block;
+        background: url(../images/LC40-game-page1-bg-2.jpg) no-repeat top center;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        -webkit-animation: img_shine 1.5s linear infinite alternate;
+        animation: img_shine 1.5s linear infinite alternate; }
+    body .LC40-index-wrap .content {
       position: absolute;
-      z-index: 1;
-      top: 0;
+      top: 763px;
       left: 0;
       right: 0;
-      -webkit-animation: img_shine 1.5s linear infinite alternate;
-      animation: img_shine 1.5s linear infinite alternate; }
-  .LC40-index-wrap .content {
-    position: absolute;
-    top: 597px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    text-align: center; }
-    .LC40-index-wrap .content .LC40-pic {
-      padding-left: 54.8%;
-      width: 100%; }
-    .LC40-index-wrap .content .text {
-      padding-top: 7em;
-      padding-bottom: 3em; }
-      .LC40-index-wrap .content .text p {
-        text-align: center;
-        font-size: 34px;
-        font-weight: bolder; }
-        .LC40-index-wrap .content .text p:nth-of-type(1) {
-          color: #ba7c17; }
-          .LC40-index-wrap .content .text p:nth-of-type(1) span {
-            font-size: 55px; }
-        .LC40-index-wrap .content .text p:nth-of-type(2) {
-          padding-top: 0.5em; }
+      z-index: 2;
+      text-align: center; }
+      body .LC40-index-wrap .content .LC40-pic {
+        padding-left: 54.8%;
+        width: 100%; }
+      body .LC40-index-wrap .content .text {
+        padding-top: 7em;
+        padding-bottom: 3em; }
+        body .LC40-index-wrap .content .text p {
+          text-align: center;
+          font-size: 34px;
+          font-weight: bolder; }
+          body .LC40-index-wrap .content .text p:nth-of-type(1) {
+            color: #ba7c17; }
+            body .LC40-index-wrap .content .text p:nth-of-type(1) span {
+              font-size: 55px; }
+          body .LC40-index-wrap .content .text p:nth-of-type(2) {
+            padding-top: 0.5em;
+            color: #073190; }
+
+.modal-dialog {
+  margin: 100px auto; }
 
 .LC40-start-wrap {
   max-width: 750px;
   width: 100%;
-  height: 100vh;
   margin: 0 auto;
   position: relative;
   overflow: hidden; }
@@ -414,13 +381,16 @@ footer {
     height: 100%;
     position: absolute;
     z-index: -1;
-    top: -300px;
+    bottom: 0;
     left: 0;
     right: 0;
-    -webkit-animation: backgroundScale 5s ease 2s;
-    animation: backgroundScale 5s ease 2s;
+    -webkit-animation: backgroundScale 3s ease alternate;
+    animation: backgroundScale 3s ease alternate;
     -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center; }
   .LC40-start-wrap .loading {
     display: none; }
   .LC40-start-wrap .loading.on {
@@ -465,23 +435,25 @@ footer {
     left: 12px;
     -webkit-animation-delay: 500ms;
     animation-delay: 500ms; }
+  .LC40-start-wrap .bg-img {
+    width: 100%;
+    background: url(../images/LC40-game-page2-bg.png) no-repeat top center;
+    background-size: 100%; }
   .LC40-start-wrap .top {
     position: absolute;
-    top: 0;
+    z-index: 6;
+    top: 200px;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 6;
-    width: 100%; }
+    width: 750px;
+    height: 820px; }
     .LC40-start-wrap .top .probiotic-game-wrap {
-      position: absolute;
-      left: 0;
-      bottom: 900px;
       padding-left: 5%;
       opacity: 0.6;
       width: 60%;
-      -webkit-animation: probiotic-game-wrap 3s ease-in-out 2s;
-      animation: probiotic-game-wrap 3s ease-in-out 2s;
+      -webkit-animation: probiotic-game-wrap 3s ease-in-out  alternate;
+      animation: probiotic-game-wrap 3s ease-in-out  alternate;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
       -webkit-transform-origin: bottom left;
@@ -615,8 +587,8 @@ footer {
             animation: rotate2 1.5s infinite ease-in-out alternate;
             -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s; }
-  .LC40-start-wrap footer {
-    height: 423px; }
+  .LC40-start-wrap footer .footer-content {
+    bottom: 85px; }
     .LC40-start-wrap footer .footer-content .text-wrap {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -647,47 +619,50 @@ footer {
                 font-size: 25px;
                 vertical-align: super; }
           .LC40-start-wrap footer .footer-content .text-wrap .text p:nth-of-type(2) {
-            padding-top: 0.5em; }
+            padding-top: 0.5em;
+            color: #073190; }
     .LC40-start-wrap footer .footer-content .note {
       color: #000; }
 
-.LC40-success-wrap {
-  max-width: 750px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden; }
-  .LC40-success-wrap .bg-img {
+body {
+  background-color: #023591; }
+  body .LC40-success-wrap {
+    max-width: 750px;
     width: 100%;
-    background: url(../images/LC40-game-page3-bg.jpg) no-repeat top center;
-    background-size: 100%; }
-    .LC40-success-wrap .bg-img:before {
-      content: "";
-      display: block;
-      background: url(../images/LC40-game-page3-bg-2.jpg) no-repeat top center;
-      background-size: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; }
+    body .LC40-success-wrap .bg-img {
       width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      right: 0;
-      -webkit-animation: img_shine 1.5s linear infinite alternate;
-      animation: img_shine 1.5s linear infinite alternate; }
-    .LC40-success-wrap .bg-img:before {
-      content: "";
-      display: block;
-      background: url(../images/ribbon.png) no-repeat center center;
-      background-size: 100%;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: 0;
-      right: 0;
-      -webkit-animation: scale-ribbon 5s linear alternate;
-      animation: scale-ribbon 5s linear alternate;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards; }
+      background: url(../images/LC40-game-page3-bg.jpg) no-repeat top center;
+      background-size: 100%; }
+      body .LC40-success-wrap .bg-img:before {
+        content: "";
+        display: block;
+        background: url(../images/LC40-game-page3-bg-2.jpg) no-repeat top center;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        -webkit-animation: img_shine 1.5s linear infinite alternate;
+        animation: img_shine 1.5s linear infinite alternate; }
+      body .LC40-success-wrap .bg-img:after {
+        content: "";
+        display: block;
+        background: url(../images/ribbon.png) no-repeat center center;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        -webkit-animation: scale-ribbon 2s ease alternate;
+        animation: scale-ribbon 2s ease alternate;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards; }

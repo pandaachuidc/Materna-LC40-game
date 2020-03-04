@@ -188,6 +188,7 @@ $yellow: #d6a818;
 $dark-yellow: #ba7c17;
 $blue: #267cc4;
 $dark-blue: #073190;
+$bg-blue:#023591;
 
 #wrongModal .modal-dialog .modal-content {
   background-color: rgba(0, 0, 0, 0);
@@ -204,12 +205,9 @@ $dark-blue: #073190;
 
 // footer
 footer {
-  position: absolute;
-  bottom: 0;
-  height: 258px;
   .footer-content {
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
     left: 0;
     right: 0;
     z-index: 3;
@@ -237,14 +235,14 @@ footer {
   }
 }
 
-@keyframes font-shine {
-  0% {
-    background-position: 0% 0;
-  }
-  to {
-    background-position: -300% 0;
-  }
-}
+// @keyframes font-shine {
+//   0% {
+//     background-position: 0% 0;
+//   }
+//   to {
+//     background-position: -300% 0;
+//   }
+// }
 
 @keyframes scale {
   from {
@@ -256,11 +254,13 @@ footer {
 }
 
 @keyframes scale-ribbon {
-  from {
+  from  {
     transform: scale(1);
+    opacity: 0;
   }
   to {
-    transform: scale(1.3);
+    transform: scale(1.2);
+    opacity: 1;
   }
 }
 
@@ -279,13 +279,11 @@ footer {
 }
 
 @keyframes backgroundScale {
-  0% {
+  from  {
     transform: scale(1);
-    top: -300px;
   }
-  100% {
+  to {
     transform: scale(1.6);
-    top: -600px;
   }
 }
 
@@ -306,51 +304,51 @@ footer {
   }
 }
 
-.shine-font-yellow {
-  background: -webkit-linear-gradient(
-    left,
-    $yellow 0%,
-    $dark-yellow 24%,
-    $yellow 36%,
-    $dark-yellow 46%,
-    $yellow 52%,
-    $dark-yellow 58%,
-    $dark-yellow 67%,
-    $yellow 100%
-  );
-  background-size: 100%;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  background-size: 300%;
-  -webkit-animation: font-shine 10s infinite;
-  animation: font-shine 10s infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+// .shine-font-yellow {
+//   background: -webkit-linear-gradient(
+//     left,
+//     $yellow 0%,
+//     $dark-yellow 24%,
+//     $yellow 36%,
+//     $dark-yellow 46%,
+//     $yellow 52%,
+//     $dark-yellow 58%,
+//     $dark-yellow 67%,
+//     $yellow 100%
+//   );
+//   background-size: 100%;
+//   -webkit-transition: 1s;
+//   -o-transition: 1s;
+//   transition: 1s;
+//   background-size: 300%;
+//   -webkit-animation: font-shine 10s infinite;
+//   animation: font-shine 10s infinite;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }
 
-.shine-font-blue {
-  background: -webkit-linear-gradient(
-    left,
-    $blue 0%,
-    $dark-blue 24%,
-    $blue 36%,
-    $dark-blue 46%,
-    $blue 52%,
-    $dark-blue 58%,
-    $dark-blue 67%,
-    $blue 100%
-  );
-  background-size: 100%;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  background-size: 300%;
-  -webkit-animation: font-shine 10s infinite;
-  animation: font-shine 10s infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+// .shine-font-blue {
+//   background: -webkit-linear-gradient(
+//     left,
+//     $blue 0%,
+//     $dark-blue 24%,
+//     $blue 36%,
+//     $dark-blue 46%,
+//     $blue 52%,
+//     $dark-blue 58%,
+//     $dark-blue 67%,
+//     $blue 100%
+//   );
+//   background-size: 100%;
+//   -webkit-transition: 1s;
+//   -o-transition: 1s;
+//   transition: 1s;
+//   background-size: 300%;
+//   -webkit-animation: font-shine 10s infinite;
+//   animation: font-shine 10s infinite;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }
 
 // pad layout
 @media screen and (max-width: 767px) {
