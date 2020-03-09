@@ -28,7 +28,7 @@ body {
     }
     .content {
       position: absolute;
-      top: 763px;
+      top: 0;
       left: 0;
       right: 0;
       z-index: 2;
@@ -44,14 +44,27 @@ body {
           text-align: center;
           font-size: 34px;
           font-weight: bolder;
+          position: absolute;
           &:nth-of-type(1) {
             color: $dark-yellow;
+            font-size: 40px;
+            line-height: 1.4;
+            padding-top: 0.5em;
+            left: 0;
+            right: 0;
+            top: 197px;
             span {
-              font-size: 55px;
+              display: block;
+              font-size: 34px;
             }
           }
           &:nth-of-type(2) {
-            padding-top: 0.5em;
+            left: 0;
+            right: 0;
+            top: 906px;
+            span {
+              font-size: 55px;
+            }
             color: $dark-blue;
           }
         }

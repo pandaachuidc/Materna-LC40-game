@@ -340,7 +340,7 @@ body {
         animation: img_shine 1.5s linear infinite alternate; }
     body .LC40-index-wrap .content {
       position: absolute;
-      top: 763px;
+      top: 0;
       left: 0;
       right: 0;
       z-index: 2;
@@ -354,14 +354,26 @@ body {
         body .LC40-index-wrap .content .text p {
           text-align: center;
           font-size: 34px;
-          font-weight: bolder; }
+          font-weight: bolder;
+          position: absolute; }
           body .LC40-index-wrap .content .text p:nth-of-type(1) {
-            color: #ba7c17; }
-            body .LC40-index-wrap .content .text p:nth-of-type(1) span {
-              font-size: 55px; }
-          body .LC40-index-wrap .content .text p:nth-of-type(2) {
+            color: #ba7c17;
+            font-size: 40px;
+            line-height: 1.4;
             padding-top: 0.5em;
+            left: 0;
+            right: 0;
+            top: 197px; }
+            body .LC40-index-wrap .content .text p:nth-of-type(1) span {
+              display: block;
+              font-size: 34px; }
+          body .LC40-index-wrap .content .text p:nth-of-type(2) {
+            left: 0;
+            right: 0;
+            top: 906px;
             color: #073190; }
+            body .LC40-index-wrap .content .text p:nth-of-type(2) span {
+              font-size: 55px; }
 
 .modal-dialog {
   margin: 100px auto; }
